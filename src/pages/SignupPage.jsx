@@ -26,7 +26,7 @@ const SignUpPage = () => {
         alert("Please fill all the fields");
       } else {
         const response = await axios.post(
-          "http://localhost:3000/api/v1/user/sign-up",
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/sign-up`,
           Value
         );
         alert(response.data.message);

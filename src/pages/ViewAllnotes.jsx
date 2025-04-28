@@ -17,7 +17,7 @@ function ViewAllNotes() {
     const fetchNotes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/note/get-notes",
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/note/get-notes`,
           { headers }
         ); // Replace with your actual API endpoint
         setNotes(response.data); // Assuming response data contains the notes array

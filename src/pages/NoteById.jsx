@@ -25,7 +25,9 @@ function NoteById() {
         };
 
         const response = await axios.get(
-          `http://localhost:3000/api/v1/note/get-notes-by-id/${id}`,
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/api/v1/note/get-notes-by-id/${id}`,
           { headers }
         );
 
@@ -59,7 +61,9 @@ function NoteById() {
       };
 
       const response = await axios.delete(
-        `http://localhost:3000/api/v1/note/delete-note-by-id/${id}`,
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/api/v1/note/delete-note-by-id/${id}`,
         { headers }
       );
 
@@ -84,7 +88,9 @@ function NoteById() {
             <div className="mb-2 flex gap-2 justify-start items-center">
               <p className="text-gray-700 font-bold mb-2">Attachment:</p>
               <a
-                href={`http://localhost:3000/uploads/${note.file}`}
+                href={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                  note.file
+                }`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 rounded-md border-slate-500 bg-slate-300 border-2 p-1 mb-2 hover:text-black hover:font-semibold"

@@ -27,7 +27,9 @@ function UpdateNote() {
         };
 
         const response = await axios.get(
-          `http://localhost:3000/api/v1/note/get-notes-by-id/${id}`,
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/api/v1/note/get-notes-by-id/${id}`,
           { headers }
         );
 
@@ -58,7 +60,7 @@ function UpdateNote() {
       };
 
       const response = await axios.put(
-        `http://localhost:3000/api/v1/note/update-note/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/note/update-note/${id}`,
         { title, description, price },
         { headers }
       );

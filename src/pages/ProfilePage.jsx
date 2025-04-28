@@ -21,7 +21,9 @@ const ProfilePage = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/user/get-user-information",
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/api/v1/user/get-user-information`,
           { headers }
         );
         setProfile(response.data);
@@ -76,7 +78,9 @@ const ProfilePage = () => {
             <img
               src={
                 profile.avatar
-                  ? `http://localhost:3000/uploads/${profile.avatar}`
+                  ? `${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                      profile.avatar
+                    }`
                   : "/default-avatar.png"
               }
               alt="Profile"

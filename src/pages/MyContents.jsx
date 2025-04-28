@@ -14,7 +14,7 @@ function MyContents() {
     const fetchNotes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/note/get-notes",
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/note/get-notes`,
           { headers }
         );
 

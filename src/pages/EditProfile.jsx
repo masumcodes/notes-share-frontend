@@ -20,7 +20,9 @@ const EditProfile = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/user/get-user-information",
+          `${
+            import.meta.env.VITE_BACKEND_URL
+          }/api/v1/user/get-user-information`,
           { headers }
         );
         const { username, email, about } = response.data;
@@ -58,7 +60,9 @@ const EditProfile = () => {
       }
 
       await axios.put(
-        "http://localhost:3000/api/v1/user/update-user-information",
+        `${
+          import.meta.env.VITE_BACKEND_URL
+        }/api/v1/user/update-user-information`,
         formData,
         {
           headers: {

@@ -25,7 +25,7 @@ function LoginPage() {
         alert("Please fill in all fields");
       } else {
         const response = await axios.post(
-          "http://localhost:3000/api/v1/user/sign-in", // Fixed the extra `/`
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/sign-in`, // Fixed the extra `/`
           value
         );
 
