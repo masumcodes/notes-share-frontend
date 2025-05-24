@@ -75,26 +75,6 @@ function ViewAllNotes() {
                 >
                   {note.price === 0 ? "Free" : `₹${note.price}`}
                 </span>
-                {/* <div className="mt-4 flex gap-2">
-                  <button
-                    onClick={() => increasePrice(index)}
-                    className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition-all duration-300"
-                  >
-                    Increase Price
-                  </button>
-                  <button
-                    onClick={() => decreasePrice(index)}
-                    className="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600 transition-all duration-300"
-                  >
-                    Decrease Price
-                  </button>
-                  <button
-                    onClick={() => makeFree(index)}
-                    className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600 transition-all duration-300"
-                  >
-                    Make Free
-                  </button>
-                </div> */}
               </div>
             </div>
           ))}

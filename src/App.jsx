@@ -15,7 +15,7 @@ import NoteById from "./pages/NoteById";
 import Navbar from "./components/Nabvar";
 import MyContents from "./pages/MyContents";
 import UpdateNote from "./pages/Update";
-
+import SomeNote from "./pages/SomeNote";
 const App = () => {
   const dispatch = useDispatch();
   const role = useSelector((state) => state.auth.role);
@@ -34,6 +34,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

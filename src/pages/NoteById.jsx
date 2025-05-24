@@ -80,9 +80,12 @@ function NoteById() {
       {error && <p className="text-center text-red-500">{error}</p>}
       {note ? (
         <div className="bg-white shadow-md rounded-lg p-6 border border-gray-200 max-w-lg mx-auto">
-          <h2 className="text-2xl font-semibold mb-4">{note.name}</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-orange-700 break-words">
+            {note.name}
+          </h2>
           <p className="text-gray-600 mb-4">
-            <span className="font-bold">Description:</span> {note.description}
+            <span className="font-bold break-words">Description:</span>{" "}
+            {note.description}
           </p>
           {note.file && (
             <div className="mb-2 flex gap-2 justify-start items-center">

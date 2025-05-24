@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import SomeNote from "./SomeNote";
+import Footer from "../components/Footer";
 // import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
@@ -102,9 +104,11 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+        {/* Some Notes Section */}
+        <SomeNote />
 
         {/* Features Section */}
-        <section className=" py-16 px-4">
+        {/* <section className=" py-16 px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-blue-900">
             Features
           </h2>
@@ -137,12 +141,9 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Footer Section */}
-        <footer className="bg-blue-800 text-white text-center py-4 mt-12">
-          <p>&copy; 2024 NoteShare | All Rights Reserved</p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

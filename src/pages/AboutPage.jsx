@@ -73,9 +73,7 @@ function AboutUsPage() {
       {/* Footer Section */}
       <div className="bg-blue-800 text-white py-6">
         <div className="container mx-auto px-6 lg:px-12 text-center">
-          <p className="text-sm">
-            © 2024 [Your Website Name]. All rights reserved.
-          </p>
+          <p className="text-sm">© 2024 NoteShare. All rights reserved.</p>
         </div>
       </div>
     </div>

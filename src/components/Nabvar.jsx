@@ -17,12 +17,9 @@ function Navbar() {
     <nav className=" h-16 z-50 bg-black inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]  fixed w-full  text-white lg:px-8 px-3 py-6 flex items-center justify-between">
       {/* Logo */}
 
-      <Link to="/" className=" w-36  rounded-lg  ">
-        <img
-          className="lg:h-10 h-8 rounded-lg w-32 lg:w-36 "
-          src="Note.png"
-          alt="logo"
-        />
+      <Link to="/" className=" w-36  flex gap-1  rounded-lg  ">
+        <h1 className="text-lg font-bold text-red-700">Note</h1>
+        <h2 className="text-base font-semibold mt-2 text-violet-800">Share</h2>
       </Link>
 
       {/* Hamburger Menu for Mobile */}
@@ -34,16 +31,17 @@ function Navbar() {
       </button>
 
       {/* Links */}
+
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } md:flex flex-col md:flex-row  items-center gap-4 absolute md:static  w-full md:w-auto top-14 left-0 md:top-auto md:left-auto shadow-md md:shadow-none`}
+        } md:flex flex-col md:flex-row md:bg-transparent bg-slate-600 italic  gap-4 absolute md:static  w-50% md:w-auto top-14 left-2/3 md:top-auto md:left-auto shadow-md md:shadow-none`}
       >
         <Link
           to="/"
           className={`${getLinkClasses(
             "/"
-          )}text-white py-2 font-bold text-lg hover:text-indigo-600 hover:scale-105 hover:duration-150 px-4 block md:inline-block`}
+          )}text-white py-2 font-bold text-base hover:text-indigo-600 hover:scale-105 hover:duration-150 px-4 block md:inline-block`}
         >
           Home
         </Link>
@@ -51,7 +49,7 @@ function Navbar() {
           to="/about"
           className={`${getLinkClasses(
             "/about"
-          )}text-white py-2 font-bold text-lg px-4 block md:inline-block`}
+          )}text-white py-2 font-bold text-base px-4 block md:inline-block`}
         >
           AboutUs
         </Link>
@@ -61,7 +59,7 @@ function Navbar() {
               to="/mycontents"
               className={`${getLinkClasses(
                 "/note/mycontents"
-              )} px-4 py-2 block font-bold text-lg md:inline-block  transition-all duration-300`}
+              )} px-4 py-2 block font-bold text-base md:inline-block  transition-all duration-300`}
             >
               MyContents
             </Link>
@@ -70,7 +68,7 @@ function Navbar() {
               to="/profile"
               className={`${getLinkClasses(
                 "/profile"
-              )} px-4 py-2 block font-bold text-lg md:inline-block  transition-all duration-300`}
+              )} px-4 py-2 block font-bold text-base md:inline-block  transition-all duration-300`}
             >
               Profile
             </Link>

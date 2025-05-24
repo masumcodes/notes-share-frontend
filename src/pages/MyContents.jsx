@@ -30,15 +30,8 @@ function MyContents() {
   }, [userId]); // Add userId as a dependency
 
   return (
-    <div
-      className=" min-h-screen pt-16 pl-3 pr-3"
-      style={{
-        backgroundImage: "url('/pexels-danbuilds-633409.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="bg-slate-900  h-screen  bg-opacity-40">
+    <div className=" min-h-screen pt-5  bg-gradient-to-tr from-black to-zinc-700 flex flex-col justify-between">
+      <div className="">
         <h1 className="text-3xl text-white font-semibold text-center mb-6">
           My Notes
         </h1>
@@ -58,7 +51,9 @@ function MyContents() {
                     </h2>
                     <h1 className="text-xl font-bold text-white">:</h1>
                     <h2 className="text-white font-medium text-base">
-                      {note.name || "Untitled Note"}
+                      {note.name.length > 30
+                        ? note.name.slice(0, 32) + "..."
+                        : note.name}
                     </h2>
                   </div>
                   <div className="flex items-center gap-2 ">
@@ -67,7 +62,9 @@ function MyContents() {
                     </h2>
                     <h1 className="text-xl font-bold text-white">:</h1>
                     <h2 className="text-white font-medium text-base">
-                      {note.description || "Untitled Note"}
+                      {note.description.length > 20
+                        ? note.description.slice(0, 20) + "..."
+                        : note.description}
                     </h2>
                   </div>
                   <div className="flex items-center gap-2">
